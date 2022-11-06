@@ -8,12 +8,12 @@ import { ActiveTheme } from "../types";
 
 const StyledHeader = styled.header`
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-  padding: 1.75rem 1rem;
   .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    padding: 1.75rem 1rem;
   }
 
   .second-section {
