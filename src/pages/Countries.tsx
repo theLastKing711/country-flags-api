@@ -62,7 +62,7 @@ const Countries = () => {
 
   const theme = useTheme();
 
-  const { isLoading, isError, data, error, refetch } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ["countries", regionFilter, countryFilter],
     queryFn: () => CountriesApi.getCountries(regionFilter),
     select: (data) => CountriesApi.filterCountries(data, countryFilter),

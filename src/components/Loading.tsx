@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 
@@ -28,7 +29,7 @@ const StyledLoading = styled.div`
     border: 8px solid #fff;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
+    border-color: ${(props) => props.color} transparent transparent transparent;
   }
   .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -50,8 +51,12 @@ const StyledLoading = styled.div`
 `;
 
 const Loading = () => {
+  const theme = useTheme();
+
+  const textColor = theme.palette.text.primary;
+
   return (
-    <StyledLoading>
+    <StyledLoading color={textColor}>
       <div className="lds-ring">
         <div></div>
         <div></div>
