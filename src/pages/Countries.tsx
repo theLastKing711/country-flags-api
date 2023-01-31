@@ -17,6 +17,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import Loading from "../components/Loading";
 
 const StyledApp = styled.div`
+  margin-bottom: 4rem;
+
   .header {
     display: flex;
     gap: 1rem;
